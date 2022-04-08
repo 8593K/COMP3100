@@ -7,7 +7,9 @@ StudentID: 46133194
 Client.java is the source code
 
 If running the test
+
 Please put the Client.java file in the folder and use the command 'javac Client.java' to get all the class files.
+
 Or download all the class files.
 
 ***The Client only connect to 127.0.0.1 and port 50000***
