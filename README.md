@@ -1,6 +1,7 @@
 This is the COMP3100 assignment Stage 1 link
 
 Name: Man Chun Kwok
+
 StudentID: 46133194
 
 Client.java is the source code
