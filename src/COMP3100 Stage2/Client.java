@@ -133,7 +133,7 @@ public class Client extends TCPService {
             if (st.isPresent()) return st.get().getType() + " " + st.get().getSystemId();
 
             st = list.stream()
-                    .filter(serverType -> serverType.getFitnessValue(job) > 0 && serverType.isActive())
+                    .filter(serverType -> serverType.getFitnessValue(job) >= 0 && serverType.isActive())
                     .min(Comparator.comparing(serverType -> serverType.getFitnessValue(job)));
 
             if (st.isPresent()) return st.get().getType() + " " + st.get().getSystemId();
