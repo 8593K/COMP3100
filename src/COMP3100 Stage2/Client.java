@@ -115,12 +115,14 @@ public class Client extends TCPService {
                 .filter(r -> r.isTypeInList(list))
                 .collect(Collectors.toList());
 
+        // algorithm design start from FC
         if (mode == FC) {
             return newRecords.stream()
                     .min(Comparator.comparing(Record::getInitialNumOfCores)).get()
                     .getScheduleServer(mode);
         }
 
+        // Stage 2 algorithm
         if (mode == FF) {
             Optional<ServerType> st = list.stream()
                     .filter(serverType -> !(Integer.parseInt(serverType.getRunning()) > 0
@@ -140,6 +142,7 @@ public class Client extends TCPService {
             if (st.isPresent()) return st.get().getType() + " " + st.get().getSystemId();
         }
 
+        // confirm no error
         return newRecords.stream()
                 .max(Comparator.comparing(Record::getInitialNumOfCores)).get()
                 .getScheduleServer(mode);
