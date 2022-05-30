@@ -1,4 +1,4 @@
-This is the COMP3100 assignment Stage 1 link
+This is the COMP3100 assignment Stage 2 link
 
 Name: Man Chun Kwok
 
@@ -16,6 +16,6 @@ Or download all the class files.
 
 ***If connect to other ip address or port***
 
-***Modify the ip address or port in Line 16 and use the command 'javac Client.java' again to get all the class files***
+***Modify the ip address or port in Line 20 and use the command 'javac Client.java' again to get all the class files***
 
 ***Please confirm all the class file is in same directory***
