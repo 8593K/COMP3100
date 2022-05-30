@@ -129,7 +129,7 @@ public class Client extends TCPService {
                             && Integer.parseInt(serverType.getScheduled()) > 0)
                             && serverType.getFitnessValue(job) >= 0)
                     .min(Comparator.comparing(serverType -> serverType.getFitnessValue(job)));
-            list.forEach(l -> System.out.println(l.getType() + " " + l.getSystemId() + " " + l.getFitnessValue(job)));
+
             if (st.isPresent()) return st.get().getType() + " " + st.get().getSystemId();
 
             st = list.stream()
